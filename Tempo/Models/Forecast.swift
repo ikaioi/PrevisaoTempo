@@ -46,6 +46,7 @@ struct Currently: Decodable{
     let windSpeed: Double?
     let precipIntensity: Double?
     let precipProbability: Double?
+    let cloudCover: Double?
     
 }
 
