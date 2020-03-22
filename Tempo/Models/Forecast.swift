@@ -24,7 +24,7 @@ struct Forecast: Decodable{
 
 struct Currently: Decodable{
     
-    let time: Int?
+    let time: Double?
     let summary: String?
     let icon: String?
     

@@ -15,6 +15,14 @@ class ForecastViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var dateTodayBt: UIButton!
+    @IBOutlet weak var temperatureNowLb: UILabel!
+    @IBOutlet weak var descriptionWeatherNowLb: UILabel!
+    @IBOutlet weak var sensationNowLb: UILabel!
+    @IBOutlet weak var iconTempNowImg: UIImageView!
+    @IBOutlet weak var viewDay: UIView!
+    @IBOutlet weak var viewWeek: UIView!
+    @IBOutlet weak var viewDetails: UIView!
     
     
     
@@ -66,7 +74,7 @@ class ForecastViewController: UIViewController {
             foundLocation = true
             
             //DEFINIR REGIAO
-            
+
             viewModel.connectForecast(lat: latitude, long: longitude)
             
             viewModel.updateLoadingStatus = {
@@ -76,9 +84,19 @@ class ForecastViewController: UIViewController {
             //EM CASO DE ERRO
             viewModel.showAlertClosure = {
                 if let error = self.viewModel.error {
+                    //ERROS DE CONEXAO E OBTENÇÃO DOS DADOS
                     print(error.localizedDescription)
                     self.showAlertMessage(message: "Ocorreu um erro ao obter a previsão. Por favor, tente novamente.")
                 }
+            }
+            
+            viewModel.showNotAvailableAlert = {
+                //A API DO DARK SKY NÃO INFORMA COMO É O FORMATO DA MSG CASO NÃO TENHA NENHUMA PREVISAO, ASSIM, EU COLOQUEI UMA MSG FIXA PARA TRATAR OS CASOS
+                self.showAlertMessage(message: "No momento não há nenhuma previsão do tempo para a sua localização :(")
+            }
+            
+            viewModel.didFinishConnection = {
+                self.setLayout()
             }
             
         }
@@ -96,7 +114,27 @@ class ForecastViewController: UIViewController {
     
     
     
+    @IBAction func refreshForecast(_ sender: Any) {
+        foundLocation = false
+        useLocationFirstTime(latitude: latitude, longitude: longitude)
+    }
+    
+    
+    
+    func setLayout(){
+        dateTodayBt.setTitle(viewModel.dateToday, for: .normal)
+        temperatureNowLb.text = viewModel.temperatureNow
+        descriptionWeatherNowLb.text = viewModel.descriptionWeatherNow
+        sensationNowLb.text = viewModel.sensationNow
+        iconTempNowImg.image = UIImage(named: viewModel.iconTempNowImg)
+        
+        viewWeek.isHidden = !viewModel.showWeekForecast
+        viewDay.isHidden = !viewModel.showHoursForecast
+    }
+    
+    
 }
+
 
 
 
@@ -114,8 +152,11 @@ extension ForecastViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location: CLLocation = locations.last!
         
-        useLocationFirstTime(latitude: Double(location.coordinate.latitude ),
-                             longitude: Double(location.coordinate.longitude ))
+        latitude = Double(location.coordinate.latitude)
+        longitude = Double(location.coordinate.longitude)
+        
+        useLocationFirstTime(latitude: latitude,
+                             longitude: longitude )
     }
     
     // Handle authorization for the location manager.
