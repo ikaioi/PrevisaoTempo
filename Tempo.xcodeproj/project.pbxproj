@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		46E22D7CABBF248FEC02F741 /* Pods_Tempo_TempoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898D3B29D0D3B2170557747D /* Pods_Tempo_TempoUITests.framework */; };
 		4F8E0D5DC297A42E6DAAADF7 /* Pods_Tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED93E088081DCB7811E38AF5 /* Pods_Tempo.framework */; };
 		8452B9DC24295AE800F4633F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452B9DB24295AE800F4633F /* AppDelegate.swift */; };
-		8452B9DE24295AE800F4633F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452B9DD24295AE800F4633F /* SceneDelegate.swift */; };
-		8452B9E024295AE800F4633F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452B9DF24295AE800F4633F /* ViewController.swift */; };
 		8452B9E324295AE800F4633F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452B9E124295AE800F4633F /* Main.storyboard */; };
 		8452B9E524295AE800F4633F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8452B9E424295AE800F4633F /* Assets.xcassets */; };
 		8452B9E824295AE800F4633F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8452B9E624295AE800F4633F /* LaunchScreen.storyboard */; };
 		8452B9F324295AE800F4633F /* TempoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452B9F224295AE800F4633F /* TempoTests.swift */; };
 		8452B9FE24295AE800F4633F /* TempoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452B9FD24295AE800F4633F /* TempoUITests.swift */; };
+		8452BA0C24295AE800F4633F /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA0B24295AE800F4633F /* ForecastViewController.swift */; };
+		8452BA1124295AE800F4633F /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA1024295AE800F4633F /* ForecastViewModel.swift */; };
+		8452BA1324295AE800F4633F /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA1224295AE800F4633F /* Forecast.swift */; };
+		8452BA1B24295AE800F4633F /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA1A24295AE800F4633F /* APIKeys.swift */; };
+		8452BA1F24295AE800F4633F /* SafeUIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA1E24295AE800F4633F /* SafeUIAlertController.swift */; };
+		8452BA2124295AE800F4633F /* ServicosLocalizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA2024295AE800F4633F /* ServicosLocalizacao.swift */; };
+		8452BA2324295AE800F4633F /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BA2224295AE800F4633F /* RoundedView.swift */; };
 		EE9DF68A612494754E18B734 /* Pods_TempoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64EEC78728DD90A44A35E77 /* Pods_TempoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,8 +47,6 @@
 		37AFA6F0DC31CD398DB258F3 /* Pods-Tempo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo.release.xcconfig"; path = "Target Support Files/Pods-Tempo/Pods-Tempo.release.xcconfig"; sourceTree = "<group>"; };
 		8452B9D824295AE800F4633F /* Tempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452B9DB24295AE800F4633F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8452B9DD24295AE800F4633F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8452B9DF24295AE800F4633F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8452B9E224295AE800F4633F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8452B9E424295AE800F4633F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8452B9E724295AE800F4633F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,13 @@
 		8452B9F924295AE800F4633F /* TempoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8452B9FD24295AE800F4633F /* TempoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoUITests.swift; sourceTree = "<group>"; };
 		8452B9FF24295AE800F4633F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8452BA0B24295AE800F4633F /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		8452BA1024295AE800F4633F /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		8452BA1224295AE800F4633F /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		8452BA1A24295AE800F4633F /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		8452BA1E24295AE800F4633F /* SafeUIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeUIAlertController.swift; sourceTree = "<group>"; };
+		8452BA2024295AE800F4633F /* ServicosLocalizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicosLocalizacao.swift; sourceTree = "<group>"; };
+		8452BA2224295AE800F4633F /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		898D3B29D0D3B2170557747D /* Pods_Tempo_TempoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tempo_TempoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C127FA6A2B2EE70E222F345C /* Pods-Tempo-TempoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TempoUITests.release.xcconfig"; path = "Target Support Files/Pods-Tempo-TempoUITests/Pods-Tempo-TempoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4B550F29D7409CDF288AAE4 /* Pods-Tempo-TempoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TempoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tempo-TempoUITests/Pods-Tempo-TempoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +111,6 @@
 				09C693A1F88C53A034B3D64A /* Pods-TempoTests.debug.xcconfig */,
 				DF45B304294800BBBC1D1B9E /* Pods-TempoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,13 +139,12 @@
 		8452B9DA24295AE800F4633F /* Tempo */ = {
 			isa = PBXGroup;
 			children = (
-				8452B9DB24295AE800F4633F /* AppDelegate.swift */,
-				8452B9DD24295AE800F4633F /* SceneDelegate.swift */,
-				8452B9DF24295AE800F4633F /* ViewController.swift */,
-				8452B9E124295AE800F4633F /* Main.storyboard */,
-				8452B9E424295AE800F4633F /* Assets.xcassets */,
-				8452B9E624295AE800F4633F /* LaunchScreen.storyboard */,
 				8452B9E924295AE800F4633F /* Info.plist */,
+				8452B9DB24295AE800F4633F /* AppDelegate.swift */,
+				8452BA0F24295AE800F4633F /* ViewModel */,
+				8452BA0D24295AE800F4633F /* Models */,
+				8452BA0E24295AE800F4633F /* Views */,
+				8452BA1424295AE800F4633F /* Support Files */,
 			);
 			path = Tempo;
 			sourceTree = "<group>";
@@ -157,6 +165,52 @@
 				8452B9FF24295AE800F4633F /* Info.plist */,
 			);
 			path = TempoUITests;
+			sourceTree = "<group>";
+		};
+		8452BA0D24295AE800F4633F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8452BA1224295AE800F4633F /* Forecast.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8452BA0E24295AE800F4633F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8452B9E424295AE800F4633F /* Assets.xcassets */,
+				8452B9E124295AE800F4633F /* Main.storyboard */,
+				8452B9E624295AE800F4633F /* LaunchScreen.storyboard */,
+				8452BA2424295AE800F4633F /* Controllers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8452BA0F24295AE800F4633F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8452BA1024295AE800F4633F /* ForecastViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8452BA1424295AE800F4633F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8452BA1A24295AE800F4633F /* APIKeys.swift */,
+				8452BA2224295AE800F4633F /* RoundedView.swift */,
+				8452BA1E24295AE800F4633F /* SafeUIAlertController.swift */,
+				8452BA2024295AE800F4633F /* ServicosLocalizacao.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		8452BA2424295AE800F4633F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8452BA0B24295AE800F4633F /* ForecastViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		D25033398839CF734942CD8E /* Frameworks */ = {
@@ -408,9 +462,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8452B9E024295AE800F4633F /* ViewController.swift in Sources */,
+				8452BA2324295AE800F4633F /* RoundedView.swift in Sources */,
+				8452BA1324295AE800F4633F /* Forecast.swift in Sources */,
+				8452BA2124295AE800F4633F /* ServicosLocalizacao.swift in Sources */,
+				8452BA1B24295AE800F4633F /* APIKeys.swift in Sources */,
+				8452BA1124295AE800F4633F /* ForecastViewModel.swift in Sources */,
+				8452BA1F24295AE800F4633F /* SafeUIAlertController.swift in Sources */,
 				8452B9DC24295AE800F4633F /* AppDelegate.swift in Sources */,
-				8452B9DE24295AE800F4633F /* SceneDelegate.swift in Sources */,
+				8452BA0C24295AE800F4633F /* ForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
