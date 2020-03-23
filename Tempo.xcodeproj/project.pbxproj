@@ -27,6 +27,7 @@
 		84848D8E24284E2E0057FBDB /* CellDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84848D8D24284E2E0057FBDB /* CellDays.swift */; };
 		84848D90242852D90057FBDB /* ForecastViewController_LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84848D8F242852D90057FBDB /* ForecastViewController_LocationManager.swift */; };
 		84872CEC24282AFD00FCAAF3 /* DetailsModalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84872CEB24282AFD00FCAAF3 /* DetailsModalVC.swift */; };
+		84872CEE242833F100FCAAF3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84872CED242833F100FCAAF3 /* Localizable.strings */; };
 		EE9DF68A612494754E18B734 /* Pods_TempoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64EEC78728DD90A44A35E77 /* Pods_TempoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		84848D8D24284E2E0057FBDB /* CellDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDays.swift; sourceTree = "<group>"; };
 		84848D8F242852D90057FBDB /* ForecastViewController_LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController_LocationManager.swift; sourceTree = "<group>"; };
 		84872CEB24282AFD00FCAAF3 /* DetailsModalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModalVC.swift; sourceTree = "<group>"; };
+		84872CED242833F100FCAAF3 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		898D3B29D0D3B2170557747D /* Pods_Tempo_TempoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tempo_TempoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C127FA6A2B2EE70E222F345C /* Pods-Tempo-TempoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TempoUITests.release.xcconfig"; path = "Target Support Files/Pods-Tempo-TempoUITests/Pods-Tempo-TempoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C4B550F29D7409CDF288AAE4 /* Pods-Tempo-TempoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TempoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tempo-TempoUITests/Pods-Tempo-TempoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				8452BA2224295AE800F4633F /* RoundedView.swift */,
 				8452BA1E24295AE800F4633F /* SafeUIAlertController.swift */,
 				8452BA2024295AE800F4633F /* ServicosLocalizacao.swift */,
+				84872CED242833F100FCAAF3 /* Localizable.strings */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84872CEE242833F100FCAAF3 /* Localizable.strings in Resources */,
 				84848D8824280BDF0057FBDB /* LaunchScreen.storyboard in Resources */,
 				84848D8C24283C160057FBDB /* ReusableHourView.xib in Resources */,
 				8452B9E524295AE800F4633F /* Assets.xcassets in Resources */,

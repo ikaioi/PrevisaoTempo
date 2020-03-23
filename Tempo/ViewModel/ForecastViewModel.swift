@@ -119,11 +119,11 @@ class ForecastViewModel {
                 dateToday = "\(createDateTime(timestamp: forecast.currently?.time ?? 0.0, dateFormat: "E, dd/MM  HH:mm"))"
                 temperatureNow = "\(Int(forecast.currently?.temperature ?? 0.0))º"
                 descriptionWeatherNow = forecast.currently?.summary ?? ""
-                sensationNow = "Sensação térmica de \(Int(forecast.currently?.apparentTemperature ?? 0.0))º"
+                sensationNow = "\(NSLocalizedString("sensasao_termica", comment: "Sensação térmica de")) \(Int(forecast.currently?.apparentTemperature ?? 0.0))º"
                 iconTempNowImg = forecast.currently?.icon ?? "cloud"
                 
                 humidity = "\( Int(100 * (forecast.currently?.humidity ?? 0.0)))%"
-                pressure = "\(forecast.currently?.pressure ?? 0.0) milibares"
+                pressure = "\(forecast.currently?.pressure ?? 0.0) \(NSLocalizedString("milibares", comment: "milibares"))"
                 velocity = "\(forecast.currently?.windSpeed ?? 0) km/h"
                 coverSky = "\( Int(100 * (forecast.currently?.cloudCover ?? 0.0)))%"
                 

@@ -92,13 +92,13 @@ class ForecastViewController: UIViewController {
                 if let error = self.viewModel.error {
                     //ERROS DE CONEXAO E OBTENÇÃO DOS DADOS
                     print(error.localizedDescription)
-                    self.showAlertMessage(message: "Ocorreu um erro ao obter a previsão. Por favor, tente novamente.")
+                    self.showAlertMessage(message: NSLocalizedString("erro_ao_carregar", comment: "Ocorreu um erro ao obter a previsão. Por favor, tente novamente."))
                 }
             }
             
             viewModel.showNotAvailableAlert = {
                 //A API DO DARK SKY NÃO INFORMA COMO É O FORMATO DA MSG CASO NÃO TENHA NENHUMA PREVISAO, ASSIM, EU COLOQUEI UMA MSG FIXA PARA TRATAR OS CASOS
-                self.showAlertMessage(message: "No momento não há nenhuma previsão do tempo para a sua localização :(")
+                self.showAlertMessage(message: NSLocalizedString("sem_previsao", comment: "No momento não há nenhuma previsão do tempo para a sua localização :(") )
             }
             
             viewModel.didFinishConnection = {
@@ -237,19 +237,15 @@ extension ForecastViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let day = itemsWeatherPerDays[indexPath.row]
-        print(day)
-//        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "eventos") as! Eventos_VC
-//        viewController.lat = self.lat
-//        viewController.long = self.long
-//        self.navigationController?.pushViewController(viewController, animated: true)
-        
+
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let destVC = storyboard.instantiateViewController(withIdentifier: "detailsVC") //as! DetailsVC
+        let modal = storyboard.instantiateViewController(withIdentifier: "detailsVC") as! DetailsModalVC
         
-        destVC.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        destVC.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        modal.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        modal.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
+        modal.dayWeather = day
         
-        self.present(destVC, animated: true, completion: nil)
+        self.present(modal, animated: true, completion: nil)
     }
 }
 

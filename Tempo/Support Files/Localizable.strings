@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Tempo
+
+  Created by Kaio Dantas on 22/03/20.
+  Copyright © 2020 Kaio Dantas. All rights reserved.
+*/
+
+sensasao_termica = "Sensação térmica de";
+milibares = "milibares";
+sem_previsao = "No momento não há nenhuma previsão do tempo para a sua localização :(";
+erro_ao_carregar = "Ocorreu um erro ao obter a previsão. Por favor, tente novamente.";
