@@ -201,7 +201,7 @@ class ForecastViewModel {
     
     
     // MARK: - Complimentary Functions
-    private func createDateTime(timestamp: Double, dateFormat: String) -> String {
+    func createDateTime(timestamp: Double, dateFormat: String) -> String {
         var strDate = ""
     
         let date = Date(timeIntervalSince1970: timestamp)
